@@ -41051,7 +41051,7 @@ with pkgs;
     jre = openjdk19; # TODO: remove override https://github.com/NixOS/nixpkgs/pull/89731
   });
 
-  owmods-cli = callPackage ../applications/misc/owmods-cli {
+  owmods-cli = callPackage ../applications/misc/owmods/owmods-cli {
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
