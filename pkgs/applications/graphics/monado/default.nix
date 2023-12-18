@@ -131,6 +131,12 @@ stdenv.mkDerivation {
   # for some reason cmake is trying to use ${librealsense}/include
   # instead of ${librealsense.dev}/include as an include directory
 
+  # Add monado's xr-hardware udev rules
+  postInstall = ''
+    mkdir -p $out/etc/udev/rules.d
+    cp -p ${udev-rules}/etc/udev/rules.d/*.rules $out/etc/udev/rules.d
+  '';
+
   # Help openxr-loader find this runtime
   setupHook = writeText "setup-hook" ''
     export XDG_CONFIG_DIRS=@out@/etc/xdg''${XDG_CONFIG_DIRS:+:''${XDG_CONFIG_DIRS}}
