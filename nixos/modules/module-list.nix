@@ -82,6 +82,7 @@
   ./hardware/network/intel-2200bg.nix
   ./hardware/new-lg4ff.nix
   ./hardware/nitrokey.nix
+  ./hardware/monado.nix
   ./hardware/onlykey/default.nix
   ./hardware/opengl.nix
   ./hardware/openrazer.nix
