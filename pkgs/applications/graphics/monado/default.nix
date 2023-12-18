@@ -1,5 +1,6 @@
 { lib
 , stdenv
+, callPackage
 , fetchFromGitLab
 , writeText
 , cmake
@@ -47,7 +48,9 @@
 # https://gitlab.freedesktop.org/monado/monado/-/blob/master/doc/targets.md#xrt_feature_service-disabled
 , serviceSupport ? true
 }:
-
+let
+  udev-rules = callPackage ./udev_rules.nix { };
+in
 stdenv.mkDerivation {
   pname = "monado";
   version = "unstable-2023-11-09";
@@ -66,6 +69,7 @@ stdenv.mkDerivation {
     glslang
     pkg-config
     python3
+    udev-rules
   ];
 
   cmakeFlags = [
