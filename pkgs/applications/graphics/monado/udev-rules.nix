@@ -1,7 +1,6 @@
 {
   stdenv,
-  python,
-  make,
+  python3,
   fetchFromGitLab
 }:
 stdenv.mkDerivation rec {
@@ -11,11 +10,11 @@ stdenv.mkDerivation rec {
   src = fetchFromGitLab {
     domain = "gitlab.freedesktop.org";
     owner = "monado";
-    repo = "xr-hardware";
+    repo = "utilities/xr-hardware";
     rev = "9204de323210d2a5ab8635c2ee52127100de67b1";
-    hash = "";
+    hash = "sha256-ZS15WODms/WKsPu+WbfILO2BOwnxrhCY/SoF8jzOX5Q=";
   };
-  buildInputs = [ make python ];
+  buildInputs = [ stdenv python3 ];
   buildPhase = ''
     make
   '';

@@ -49,7 +49,7 @@
 , serviceSupport ? true
 }:
 let
-  udev-rules = callPackage ./udev_rules.nix { };
+  udev-rules = callPackage ./udev-rules.nix { };
 in
 stdenv.mkDerivation {
   pname = "monado";
