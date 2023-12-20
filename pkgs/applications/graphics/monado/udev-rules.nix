@@ -9,10 +9,10 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitLab {
     domain = "gitlab.freedesktop.org";
-    owner = "monado";
-    repo = "utilities/xr-hardware";
-    rev = "9204de323210d2a5ab8635c2ee52127100de67b1";
-    hash = "sha256-ZS15WODms/WKsPu+WbfILO2BOwnxrhCY/SoF8jzOX5Q=";
+    owner = "locochoco";
+    repo = "xr-hardware";
+    rev = "0e4cddf7b9df611a75afb9969280e7b1d8bb55e2";
+    hash = "sha256-BZfkU+I0IPvWsPeZ7Z5fhAl2GugEhdpy1fEHZByuK7s=";
   };
   buildInputs = [ stdenv python3 ];
   buildPhase = ''

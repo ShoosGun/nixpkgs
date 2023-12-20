@@ -57,10 +57,10 @@ stdenv.mkDerivation {
 
   src = fetchFromGitLab {
     domain = "gitlab.freedesktop.org";
-    owner = "monado";
+    owner = "locochoco";
     repo = "monado";
-    rev = "e983eecd73b1b91d2dfb356e1bc054e9202b2a7f";
-    hash = "sha256-a4ukfmJbDkhr7P3NMTfbuhXjyOta3WCc5gswX7KUAw0=";
+    rev = "6b18301dd66de16b017eccf30ddef148a5e35d30";
+    hash = "sha256-eUFN2gk6i89ihjmEXFQ9ey7/rpxGp8opz0Ib5MFBncI=";
   };
 
   nativeBuildInputs = [
