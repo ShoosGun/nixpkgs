@@ -11,8 +11,8 @@ stdenv.mkDerivation rec {
     domain = "gitlab.freedesktop.org";
     owner = "locochoco";
     repo = "xr-hardware";
-    rev = "0e4cddf7b9df611a75afb9969280e7b1d8bb55e2";
-    hash = "sha256-BZfkU+I0IPvWsPeZ7Z5fhAl2GugEhdpy1fEHZByuK7s=";
+    rev = "f6b51f768a30d489a2c52a59933025b2f2b55837";
+    hash = "sha256-ltLMYT/B66X2ToUimaVcymXsNDUQGeqMqvPJ+FMs9Y4=";
   };
   buildInputs = [ stdenv python3 ];
   buildPhase = ''
